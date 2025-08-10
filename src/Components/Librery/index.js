@@ -4,7 +4,7 @@ import "./styles.css"
 const Librery = (props) => {   
 
     
-    if(props.favoritos.length === 0){
+    if(true){
         return(
             <h2 className="favoritos__title">Aun no tienes canciones favoritas</h2>
         )

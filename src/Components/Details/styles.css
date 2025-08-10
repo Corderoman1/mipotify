@@ -1,0 +1,27 @@
+.details__title{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 40px;
+}
+.details__img{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.details__descripcion{
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.details__button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    cursor: pointer;
+}

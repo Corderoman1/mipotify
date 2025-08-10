@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import "./styles.css"
 
 const Songs = (props) => {
@@ -12,9 +13,11 @@ const Songs = (props) => {
             <>
                 {
                     <article className="song">
-                        <h2 className="song__title">Nombre:{props.song.nombre}</h2>
-                        <p className="song__autor">Autor:{props.song.autor}</p>
-                        <button className="song__agregar" onClick={addFavs}>Agregar a favoritos ❤️</button>
+                        <h2 className="song__title">Album:{props.song.strAlbum}</h2>
+                        <p className="song__autor">Autor:{props.artist}</p>
+                        <Link to={`/Details/${props.song.strAlbum}`}>
+                            <button className="song__agregar">Details</button>
+                        </Link>
                     </article>
                 }
                 
