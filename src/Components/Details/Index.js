@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams, Link } from "react-router-dom"
-import "./styles.css"
+import StyledDetails from "./styles"
 
 
 const Details = () => {
@@ -27,7 +27,7 @@ const Details = () => {
     console.log(details);
     
     return (
-            <section>
+            <StyledDetails>
                 <h2 className="details__title">{id}</h2>
                 <img src={details.strAlbumThumb} className="details__img"></img>
                 <p className="details__descripcion">{details.strDescriptionEN}</p>
@@ -36,7 +36,7 @@ const Details = () => {
                 </Link>
                 {/* <img url={details[0].strAlbum3DThumb}></img> */}
 
-            </section>
+            </StyledDetails>
     )
 }
 export default Details

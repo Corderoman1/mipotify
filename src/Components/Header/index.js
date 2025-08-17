@@ -1,21 +1,21 @@
 import React from "react";
-import "./styles.css"
+import { HeaderStyled } from "./styles";
 
 
 const Header = (props) =>  {
     if(props.show){
 
         return(
-            <header className="header">
-                <h2 className="header__title">mi<span className="header__span">Potify</span></h2>
+            <HeaderStyled>
+                <h2>mi<span >Potify</span></h2>
     
-            </header>
+            </HeaderStyled>
         )
     }else{
                 return(
-            <header className="header">
-                <h2 className="header__title">mi<span className="header__span">Potify</span></h2>
-            </header>
+            <HeaderStyled>
+                <h2>mi<span>Potify</span></h2>
+            </HeaderStyled>
         )
     }
 }

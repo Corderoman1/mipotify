@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Songs from "../Songs";
-import "./styles.css"
+import {StyledSearchResults, StyledSection} from "./styles";
 
 const SearchResults = (props) => {
   const [favoritos,setfavoritos] = useState([])
@@ -38,11 +38,11 @@ const SearchResults = (props) => {
         return (
 
             <>
-                <form onSubmit={buscar} className="formulario">
+                <StyledSearchResults onSubmit={buscar} className="formulario">
                     <input type="text" id="buscar" className="formulario__input"></input>
-                    <button type="submit" className="formulario__button">BUscar</button>
-                </form>
-                <section className="results">
+                    <button type="submit" className="formulario__button">Buscar</button>
+                </StyledSearchResults>
+                <StyledSection className="results">
 
                 {
                     !songs ? (!error ? (<p className="search__mensaje">Realiza una busqueda por artista Ejemplo: Ed Sheeran</p>) 
@@ -62,7 +62,7 @@ const SearchResults = (props) => {
                     )
                     
                 }
-                </section>
+                </StyledSection>
             </>
         )
 
